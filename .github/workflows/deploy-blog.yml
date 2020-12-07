@@ -1,7 +1,7 @@
 name: deploy blogs
 on: [push]
 jobs:
-  deploy-hugo
+  deploy-hugo:
     runs-on: ubuntu-latest
 
     steps:
