@@ -2,9 +2,8 @@
 title: "LeetCode 1. Two Sum"
 date: 2020-12-01T23:10:57+08:00
 Description: ""
-Tags: []
-Categories: []
-math: true
+Tags: ["leetcode", "easy"]
+Categories: ["algorithm"]
 DisableComments: false
 ---
 # LeetCode 1. Two Sum
@@ -82,7 +81,7 @@ class Solution {
 例如 `[2, 7, 3, 4]` 而 `target = 9`，遍歷時先遇到 `2`，差值為 `7`，此時 `Map` 中沒有 `7` 但我們先把 `{2: 0}` 存入 `Map`，而繼續遍歷下去遇到 `7`，差值為 ```java {linenos=inline}2```，此時我們可以在 `Map` 取到 `{2:0}`，所以答案就是 `[1, 0]`。
 
 ###### Java Code
-```java {linenos=table}
+```java
 class Solution {
     public int twoSum(int[] nums, int target) {
         Map<Integer, Integer> records = new HashMap<>();
