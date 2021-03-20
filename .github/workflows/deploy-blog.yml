@@ -17,7 +17,7 @@ jobs:
         run: brew install hugo
 
       - name: Build site
-        run: cd /Users/runner/work/blog-source/blog-source/source && hugo -D
+        run: cd /Users/runner/work/blog-source/blog-source/source && hugo --minify
 
       - name: Checkout blog page content
         uses: actions/checkout@v2
@@ -30,6 +30,7 @@ jobs:
       - name: Copy new blog contents, commit, then push
         run: |
           cd /Users/runner/work/blog-source/blog-source/blog
+          rm -rf ./*
           cp -a /Users/runner/work/blog-source/blog-source/source/public/. .
           git add .
           git commit -m "Update blog"
