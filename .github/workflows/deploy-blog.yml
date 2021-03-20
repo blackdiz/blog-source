@@ -17,3 +17,10 @@ jobs:
 
       - name: Build site
         run: hugo -D
+
+      - name: Checkout blog page content
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          repositofy: 'blackdiz/blackdiz.github.io'
+          token: '02c87e347e0914057a6bd466d9bcb017f479e1b0'
