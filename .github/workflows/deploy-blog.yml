@@ -10,7 +10,7 @@ jobs:
         with:
           fetch-depth: 0
           submodules: true
-          ref: draft
+          ref: master
           path: source
 
       - name: Install hugo
