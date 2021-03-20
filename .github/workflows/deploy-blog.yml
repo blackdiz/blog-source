@@ -11,6 +11,7 @@ jobs:
           fetch-depth: 0
           submodules: true
           ref: 'draft'
+          path: 'source'
 
       - name: Install hugo
         run: brew install hugo
@@ -23,4 +24,4 @@ jobs:
         with:
           fetch-depth: 0
           repository: 'blackdiz/blackdiz.github.io'
-          token: '02c87e347e0914057a6bd466d9bcb017f479e1b0'
+          path: 'blog'
