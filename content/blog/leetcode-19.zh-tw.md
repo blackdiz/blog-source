@@ -1,15 +1,14 @@
 ---
 title: "LeetCode 19. Remove Nth Node From End of List"
-date: 2020-12-09T21:20:28+08:00
-draft: true
-Tags: []
-Categories: []
-math: true
+date: 2021-03-20T22:20:55+08:00
+Tags: ["leetcode", "medium"]
+Categories: ["algorithm"]
 DisableComments: false
 ---
 
-# 19. Remove Nth Node From End of List
-Medium
+# LeetCode 19. Remove Nth Node From End of List
+
+ <span style="color: #ef6c00;">Medium</span>
 
 Given the head of a linked list, remove the nth node from the end of the list and return its head.
 
@@ -45,7 +44,7 @@ Constraints:
 之後我們就可以運用 `List` 可以用 index 直接取得元素的特性，取出 第 `n - 1` 個 Node，將它的 `next` 指 `next.next` 來把第 `n` 個 Node 刪除。
 
 #### Java Code
-```
+```java
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -86,7 +85,7 @@ class Solution {
 先遍歷 `Linked List` 一次得到長度後，再遍歷第 2 次，等走到第 `n - 1` 個 Node 時，將它的 `next` 指向 `next.next` 來把第 `n` 個 Node 刪除。
 
 #### Java Code
-```
+```java
 /**
  * Definition for singly-linked list.
  * public class ListNode {

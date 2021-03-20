@@ -1,7 +1,6 @@
 ---
 title: "LeetCode 1. Two Sum"
 date: 2020-12-01T23:10:57+08:00
-Description: ""
 Tags: ["leetcode", "easy"]
 Categories: ["algorithm"]
 DisableComments: false
