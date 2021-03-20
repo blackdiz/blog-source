@@ -1,5 +1,9 @@
 name: deploy blogs
-on: [push]
+on:
+  push:
+    branches:
+      - master
+
 jobs:
   deploy-hugo:
     runs-on: macos-latest
