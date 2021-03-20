@@ -26,7 +26,7 @@ jobs:
           repository: 'blackdiz/blackdiz.github.io'
           path: 'blog'
 
-      - name: Copy new blog contents, commit, than push
+      - name: Copy new blog contents, commit, then push
         run: |
           cd /Users/runner/work/blog-source/blog-source/blog
           cp -a /Users/runner/work/blog-source/blog-source/source/* .
