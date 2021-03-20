@@ -17,7 +17,7 @@ jobs:
         run: brew install hugo
 
       - name: Build site
-        run: hugo -D
+        run: cd /Users/runner/work/blog-source/blog-source/source && hugo -D
 
       - name: Checkout blog page content
         uses: actions/checkout@v2
