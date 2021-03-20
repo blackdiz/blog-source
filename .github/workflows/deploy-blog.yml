@@ -10,8 +10,8 @@ jobs:
         with:
           fetch-depth: 0
           submodules: true
-          ref: 'draft'
-          path: 'source'
+          ref: draft
+          path: source
 
       - name: Install hugo
         run: brew install hugo
@@ -23,8 +23,9 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          repository: 'blackdiz/blackdiz.github.io'
-          path: 'blog'
+          repository: blackdiz/blackdiz.github.io
+          path: blog
+          token: ${{ secrets.ACCESS_SECRET_FOR_ACCESS_BLOG_PAGE }}
 
       - name: Copy new blog contents, commit, then push
         run: |
