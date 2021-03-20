@@ -25,3 +25,11 @@ jobs:
           fetch-depth: 0
           repository: 'blackdiz/blackdiz.github.io'
           path: 'blog'
+
+      - name: Copy new blog contents, commit, than push
+        run: |
+          cd /Users/runner/work/blog-source/blog-source/blog
+          cp -a /Users/runner/work/blog-source/blog-source/source/* .
+          git add .
+          git commit -m "Update blog"
+          git push
