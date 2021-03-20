@@ -6,7 +6,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-go@v2.1.3
-      - run: sudo apt-get install hugo
-      - run: hugo -D
-
+        with:
+          fetch-depth: 0
+      - name: hugo
+        uses: klakegg/actions-hugo@1.0.0
