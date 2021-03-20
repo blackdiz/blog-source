@@ -2,11 +2,35 @@ name: deploy blogs
 on: [push]
 jobs:
   deploy-hugo:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-go@v2.1.3
-      - run: sudo apt-get install hugo
-      - run: hugo -D
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          submodules: true
+          ref: draft
+          path: source
 
+      - name: Install hugo
+        run: brew install hugo
+
+      - name: Build site
+        run: cd /Users/runner/work/blog-source/blog-source/source && hugo -D
+
+      - name: Checkout blog page content
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          repository: blackdiz/blackdiz.github.io
+          path: blog
+          token: ${{ secrets.ACCESS_SECRET_FOR_ACCESS_BLOG_PAGE }}
+
+      - name: Copy new blog contents, commit, then push
+        run: |
+          cd /Users/runner/work/blog-source/blog-source/blog
+          cp -a /Users/runner/work/blog-source/blog-source/source/public/. .
+          git add .
+          git commit -m "Update blog"
+          git push
