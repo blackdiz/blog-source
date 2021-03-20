@@ -2,11 +2,16 @@ name: deploy blogs
 on: [push]
 jobs:
   deploy-hugo:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: hugo
-        uses: klakegg/actions-hugo@1.0.0
+
+      - name: Install hugo
+        run: brew install hugo
+
+      - name: Build site
+        run: hugo -D
