@@ -30,7 +30,7 @@ jobs:
       - name: Copy new blog contents, commit, then push
         run: |
           cd /Users/runner/work/blog-source/blog-source/blog
-          cp -a /Users/runner/work/blog-source/blog-source/source/* .
+          cp -a /Users/runner/work/blog-source/blog-source/source/public/. .
           git add .
           git commit -m "Update blog"
           git push
