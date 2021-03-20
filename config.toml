@@ -27,7 +27,7 @@ disableLanguages        = []
   readingTime           = true
   imageStretch          = ""
   removeBlur            = false
-  socialShare           = ["email"]
+  socialShare           = []
   hideEmptyStats        = false
   math                  = true
 
