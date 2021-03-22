@@ -5,8 +5,7 @@ Tags: ["leetcode", "medium"]
 Categories: ["algorithm"]
 DisableComments: false
 ---
-
-# LeetCode 19. Remove Nth Node From End of List
+## LeetCode 19. Remove Nth Node From End of List
 
  <span style="color: #ef6c00;">Medium</span>
 

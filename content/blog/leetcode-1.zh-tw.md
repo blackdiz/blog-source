@@ -5,7 +5,7 @@ Tags: ["leetcode", "easy"]
 Categories: ["algorithm"]
 DisableComments: false
 ---
-# LeetCode 1. Two Sum
+## LeetCode 1. Two Sum
 
 <span style="color: #43a047;">Easy</span>
 
