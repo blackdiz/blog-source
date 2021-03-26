@@ -12,7 +12,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0
           submodules: true
           ref: master
           path: source
@@ -26,7 +25,6 @@ jobs:
       - name: Checkout blog page content
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0
           repository: blackdiz/blackdiz.github.io
           path: blog
           token: ${{ secrets.ACCESS_SECRET_FOR_ACCESS_BLOG_PAGE }}
