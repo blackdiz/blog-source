@@ -36,7 +36,7 @@ jobs:
           cp -a /Users/runner/work/blog-source/blog-source/source/public/. .
           git add .
           git commit -m "Update blog"
-          git push
+          git push -f
 
       - name: Send an event to trigger the action to update blog posts list in my Github profile
         run: |
