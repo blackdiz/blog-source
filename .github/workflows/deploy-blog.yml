@@ -18,12 +18,12 @@ jobs:
 
       - name: Install hugo
         run: |
-          cd /usr/local/bin
+          cd ~
           wget https://github.com/gohugoio/hugo/releases/download/v0.83.1/hugo_extended_0.83.1_Linux-64bit.tar.gz
           tar zxvf hugo_extended_0.83.1_Linux-64bit.tar.gz
 
       - name: Build site
-        run: cd /Users/runner/work/blog-source/blog-source/source && hugo --minify
+        run: cd /Users/runner/work/blog-source/blog-source/source && ~/hugo --minify
 
       - name: Checkout blog page content
         uses: actions/checkout@v2
