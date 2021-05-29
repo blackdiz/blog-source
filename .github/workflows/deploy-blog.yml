@@ -38,13 +38,6 @@ jobs:
           git commit -m "Update blog"
           git push
 
-  update-redame-with-blog:
-    name: Update this repo's README with latest blog posts
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          repository: 'blackdiz/blackdiz'
-      - uses: gautamkrishnar/blog-post-workflow@master  
-        with:
-          feed_list: "https://blackdiz.github.io/index.xml"
+      - name: Send an event to trigger the action to update blog posts list in my Github profile
+        run: |
+          curl -X POST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/blackdiz/blackdiz/dispatches --data '{"event_type": "update-blog-rss"}'
