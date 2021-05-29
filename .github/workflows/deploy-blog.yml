@@ -43,6 +43,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          repository: 'blackdiz/blackdiz'
       - uses: gautamkrishnar/blog-post-workflow@master  
         with:
           feed_list: "https://blackdiz.github.io/index.xml"
