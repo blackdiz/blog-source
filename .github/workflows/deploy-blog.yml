@@ -35,6 +35,8 @@ jobs:
       - name: Copy new blog contents, commit, then push
         run: |
           cd /home/runner/work/blog-source/blog-source/blog
+          git config --global user.email "blackdiz@gmail.com"
+          git config --global user.name "Blackdiz"
           rm -rf ./*
           cp -a /home/runner/work/blog-source/blog-source/source/public/. .
           echo $(date) > .update-date
