@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploy-hugo:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -17,7 +17,10 @@ jobs:
           path: source
 
       - name: Install hugo
-        run: brew install hugo
+        run: |
+          cd /usr/local/bin
+          wget https://github.com/gohugoio/hugo/releases/download/v0.83.1/hugo_extended_0.83.1_Linux-64bit.tar.gz
+          tar zxvf hugo_extended_0.83.1_Linux-64bit.tar.gz
 
       - name: Build site
         run: cd /Users/runner/work/blog-source/blog-source/source && hugo --minify
@@ -41,4 +44,4 @@ jobs:
 
       - name: Send an event to trigger the action to update blog posts list in my Github profile
         run: |
-          curl -X POST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/blackdiz/blackdiz/dispatches --data '{"event_type": "update-blog-rss"}'
+          curl -X POST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/blackdiz/blackdiz/dispatches --data '{"ref": "master"}'
