@@ -80,7 +80,7 @@ class Solution {
 - 時間複雜度：因為是遍歷陣列，所以時間複雜度為 $O(N)$
 
 #### 解法 2 (LeetCode Forum Solution)
-解法方式和解法 1 相同，但程式碼簡潔更多。基本上是將解法 1 中的 index 的元素是否大於或等於 `steps` 的計算直接用 `index + 該 index 的元素` 是否大於或等於後一個 index 取代，同時會用 1 個 pointer `last` 指向可以成功走到後一個 index 的 index 為何，如果最後 `last` 指到 index 0 表示可以從起點走到終點。
+解法方式和解法 1 相同，但程式碼簡潔更多。基本上是將解法 1 中的 index 的元素是否大於或等於 `distance` 的計算直接用 `index + 該 index 的元素` 是否大於或等於後一個 index 取代，同時會用 1 個 pointer `last` 指向可以成功走到後一個 index 的 index 為何，如果最後 `last` 指到 index 0 表示可以從起點走到終點。
 
 ###### Java Code
 ```java
