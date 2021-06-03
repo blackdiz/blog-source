@@ -1,5 +1,5 @@
 ---
-title: "Leetcode 55 . Jump Game"
+title: "LeetCode 55 . Jump Game"
 date: 2021-06-04T07:23:28+08:00
 Tags: ["leetcode", "medium"]
 Categories: ["algorithm"]
