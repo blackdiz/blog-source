@@ -31,7 +31,7 @@ Output: ["h","a","n","n","a","H"]
 用兩個指標 `start` 和 `end` 分別由陣列第一個和最後一個元素開始交換位置，並且彼此慢慢靠近，因為字串長度可能為奇數或偶數，所以直到 `start >= end` 為止 (當為奇數時 `start == end`，當為偶數時兩者會交錯所以用 `start > end` 判斷)。
 
 ###### Java Code
-```java=
+```java
 class Solution {
     public void reverseString(char[] s) {
         int end = s.length - 1;
