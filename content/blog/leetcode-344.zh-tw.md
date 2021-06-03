@@ -1,5 +1,5 @@
 ---
-title: "Leetcode 344"
+title: "Leetcode 344. Reverse String"
 date: 2021-03-26T10:56:51+08:00
 Tags: ["leetcode", "easy"]
 Categories: ["algorithm"]
