@@ -39,7 +39,7 @@ Constraints:
    - 1 <= n <= sz
 
 ---
-### 解決方法 1
+### 解決方法 1 (My Own Solution)
 因為我們不曉得輸入的 `Linked List` 有多長，所以我們一邊遍歷 `Linked List` 一邊用 1 個 `List` 記錄下遍歷過的 Node 和順序。
 之後我們就可以運用 `List` 可以用 index 直接取得元素的特性，取出 第 `n - 1` 個 Node，將它的 `next` 指 `next.next` 來把第 `n` 個 Node 刪除。
 
@@ -81,7 +81,7 @@ class Solution {
 }
 ```
 
-### 解決方法 2
+### 解決方法 2 (My Own Solution)
 先遍歷 `Linked List` 一次得到長度後，再遍歷第 2 次，等走到第 `n - 1` 個 Node 時，將它的 `next` 指向 `next.next` 來把第 `n` 個 Node 刪除。
 
 #### Java Code

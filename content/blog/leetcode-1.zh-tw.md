@@ -22,7 +22,7 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 ```
 
-#### 解決方法 1
+#### 解決方法 1 (My Own Solution)
 直覺的話就是暴力解法，用所有元素組合兩兩相加直到找出加總等於 `target` 為止。
 
 ###### Java Code
@@ -45,7 +45,7 @@ class Solution {
 
 時間複雜度：每個元素都要遍歷陣列一次，所以有 $N$ 個元素時為 $O(N^2)$。
 
-#### 解決方法 2
+#### 解決方法 2 (My Own Solution)
 使用 `Map` 將 `{數字 : index}` 儲存起來，在遍歷陣列時直接從 `Map` 取差值，如果有取到則回傳兩者的 index。
 
 ###### Java Code

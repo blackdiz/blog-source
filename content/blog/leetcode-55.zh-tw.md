@@ -31,7 +31,7 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum jump 
 -   `1 <= nums.length <= 104`
 -   `0 <= nums[i] <= 105`
 
-#### 解法 1
+#### 解決方法 1 (My Own Solution)
 根據題目的說明，我們從第 1 個 index 出發，其數字為可走的步數，所以反過來如果我們從最後一個 index 開始往前，只要前 1 個 index 的元素也就是可走的步數大於或等於兩個 index 間的距離就表示可以有辦法走到下一個 index，我們就可以再往前走。
 以 Example 1 為例：
 1. index 3 的步數為 1，等於 index 3 到 index 4 (同時也是終點)的距離 1 表示有辦法走到終點，所以我們可以再往前一個 index 檢查。
