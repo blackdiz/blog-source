@@ -15,11 +15,13 @@ String sql = "select Name as Name, SeqNo as SeqNo from Test where Name = :name";
     return result;
 ```
 也就是 `Name` 和 `SeqNo`，但跑出來的結果卻是全大寫的 `NAME` 和 `SEQNO`：
-![](../../static/img/wWBWDDJ.png)
+
+![](../../img/blog/wWBWDDJ.png)
 
 而且我使用 SQLServer 測試時無法重現這個狀況。一開始以為是不是 Spring JPA 的設定問題，但 Google 大神沒有降什麼神旨，翻了 Spring JPA 的文件也沒看到什麼相關的設定，想說只好用 debug 模式來追蹤一下到底執行過程中是不是有什麼地方會去修改 alias column name。
 在追蹤的過程中，突然看到這行：
-![](../../static/img/rP3ufx3.png)
+
+![](../../img/blog/rP3ufx3.png)
 雖然和執行過程無關 😅，但 `factory.getJdbcServices().getDialect()` 讓我想到朋友用的是 H2 Database，馬上去官網查了一下發現果然是因為 H2 預設對於沒有使用 `""` 括起來的欄位名稱都會依設定轉成全大寫或全小寫：
 >### Name
 >
@@ -53,7 +55,8 @@ String sql = "select Name as \"Name\", SeqNo as \"SeqNo\" from Test where Name =
     return result;
 ```
 就可以正常回傳 `Name` 和 `SeqNo`：
-![](../../static/img/blog/pYyd9s9.png)
+
+![](../../img/blog/pYyd9s9.png)
 
 其實這件事也讓我在思考，使用像 H2 這樣的 Memory Database 雖然可以加速測試，但畢竟它和正式線上的資料庫不同，這樣的話這些測試是否能真實反映出實際的狀況呢?或者在 Unit Test 時直接使用如 DBUnit 這類的模擬假資料，反正使用 H2 模擬的也一樣只是假資料，而在 Integration Test 時使用和正式環境相同的資料庫這樣才更有意義也不一定?
 
