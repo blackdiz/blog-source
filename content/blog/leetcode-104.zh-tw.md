@@ -1,5 +1,5 @@
 ---
-title: "Leetcode 104. Maximum Depth of Binary Tree"
+title: "LeetCode 104. Maximum Depth of Binary Tree"
 date: 2021-06-09T01:14:14+08:00
 Tags: ["leetcode", "easy"]
 Categories: ["algorithm"]
