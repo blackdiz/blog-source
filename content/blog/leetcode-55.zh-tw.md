@@ -1,12 +1,12 @@
 ---
-title: "LeetCode 55 . Jump Game"
+title: "LeetCode 55. Jump Game"
 date: 2021-06-04T07:23:28+08:00
 Tags: ["leetcode", "medium"]
 Categories: ["algorithm"]
 ---
-# LeetCode 55. Jump Game
+## LeetCode 55. Jump Game
 
-<span style="color: #ef6c00";>Medium</span>
+<span style="color: #ef6c00;">Medium</span>
 
 Given an array of non-negative integers `nums`, you are initially positioned at the **first index** of the array.
 
