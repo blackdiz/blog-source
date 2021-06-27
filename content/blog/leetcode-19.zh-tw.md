@@ -4,11 +4,11 @@ date: 2021-03-20T22:20:55+08:00
 Tags: ["leetcode", "medium"]
 Categories: ["algorithm"]
 Draft: true
-DisableComments: false
+DisableCommentsd: false
 ---
 ## LeetCode 19. Remove Nth Node From End of List
 
- <span style="color: #ef6c00;">Medium</span>
+ <span class="medium">Medium</span>
 
 Given the head of a linked list, remove the nth node from the end of the list and return its head.
 
@@ -125,3 +125,5 @@ class Solution {
     }
 }
 ```
+
+如果有什麼想法或需要指正的地方，歡迎您留言或來信 😄

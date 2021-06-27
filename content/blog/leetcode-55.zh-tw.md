@@ -6,7 +6,7 @@ Categories: ["algorithm"]
 ---
 ## LeetCode 55. Jump Game
 
-<span style="color: #ef6c00;">Medium</span>
+<span class="medium">Medium</span>
 
 Given an array of non-negative integers `nums`, you are initially positioned at the **first index** of the array.
 
@@ -136,3 +136,4 @@ class Solution {
 
 - 時間複雜度：需要遍歷陣列，所以時間複雜度為 $O(N)$
 
+如果有什麼想法或需要指正的地方，歡迎您留言或來信 😄

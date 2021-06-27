@@ -3,11 +3,10 @@ title: "LeetCode 1. Two Sum"
 date: 2020-12-01T23:10:57+08:00
 Tags: ["leetcode", "easy"]
 Categories: ["algorithm"]
-DisableComments: false
 ---
 ## LeetCode 1. Two Sum
 
-<span style="color: #43a047;">Easy</span>
+<span class="easy">Easy</span>
 
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 
@@ -116,3 +115,5 @@ func twoSum(nums []int, target int) []int {
 ```
 時間複雜度：需要遍歷 $N$ 個元素，所以為 $O(N)$
 空間複雜度：需要建立儲存 $N$ 個元素的 `Map`，所以為 $O(N)$
+
+如果有什麼想法或需要指正的地方，歡迎您留言或來信 😄

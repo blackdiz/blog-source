@@ -3,12 +3,11 @@ title: "LeetCode 104. Maximum Depth of Binary Tree"
 date: 2021-06-09T01:14:14+08:00
 Tags: ["leetcode", "easy"]
 Categories: ["algorithm"]
-DisableComments: false
 ---
 
 ## LeetCode 104. Maximum Depth of Binary Tree
 
-<span style="color: #43a047;">Easy</span>
+<span class="easy">Easy</span>
 
 #### 題目
 Given a binary tree, find its maximum depth.
@@ -124,3 +123,5 @@ func recMaxDepth(node *TreeNode, currentDepth int, maxDepth int) int {
     return maxDepth
 }
 ```
+
+如果有什麼想法或需要指正的地方，歡迎您留言或來信 😄

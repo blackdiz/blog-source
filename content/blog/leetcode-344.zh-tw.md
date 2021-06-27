@@ -7,7 +7,7 @@ Categories: ["algorithm"]
 
 ## LeetCode 344. Reverse String
 
-<span style="color: #43a047;">Easy</span>
+<span class="easy">Easy</span>
 
 #### 題目
 Write a function that reverses a string. The input string is given as an array of characters `char[]`.
@@ -48,3 +48,4 @@ class Solution {
 }
 ```
 
+如果有什麼想法或需要指正的地方，歡迎您留言或來信 😄

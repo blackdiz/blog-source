@@ -60,4 +60,4 @@ String sql = "select Name as \"Name\", SeqNo as \"SeqNo\" from Test where Name =
 
 其實這件事也讓我在思考，使用像 H2 這樣的 Memory Database 雖然可以加速測試，但畢竟它和正式線上的資料庫不同，這樣的話這些測試是否能真實反映出實際的狀況呢?或者在 Unit Test 時直接使用如 DBUnit 這類的模擬假資料，反正使用 H2 模擬的也一樣只是假資料，而在 Integration Test 時使用和正式環境相同的資料庫這樣才更有意義也不一定?
 
-如果有什麼想法或指正，歡迎您留言或來信 😄
+如果有什麼想法或需要指正的地方，歡迎您留言或來信 😄
