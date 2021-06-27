@@ -1,5 +1,5 @@
 ---
-title: "Leetcode 136"
+title: "Leetcode 136. Single Number"
 date: 2021-06-27T21:35:21+08:00
 Tags: ["leetcode", "easy"]
 Categories: ["algorithm"]
