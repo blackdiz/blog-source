@@ -62,7 +62,7 @@ disableLanguages        = []
       alt                 = "Hugo Future Imperfect Slim"
 
   [params.sidebar]
-    about               = "I'm so weak, so I follow every masters for learning anything I don't know."
+    about               = "I'm so weak, so I learn from every master for things that I don't know"
     postAmount          = 5
     categories          = true
     categoriesByCount   = true
