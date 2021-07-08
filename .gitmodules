@@ -2,3 +2,7 @@
 	path = themes/hugo-future-imperfect-slim
 	url = https://github.com/pacollins/hugo-future-imperfect-slim.git
 	branch = master
+[submodule "themes/CodeIT"]
+	path = themes/CodeIT
+	url = https://github.com/sunt-programator/CodeIT.git
+	branch = master
