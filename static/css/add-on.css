@@ -13,3 +13,7 @@ code {
 .medium {
   color: #ef6c00;
 }
+.post {
+  font-size: 1.3em;
+  line-height: 2;
+}
