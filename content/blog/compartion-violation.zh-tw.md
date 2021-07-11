@@ -38,7 +38,6 @@ public int compareTo(Elment e) {
 
 - 如果和此元素比較的元素 `e` 是 `null` 或 `e` 的 `val` 是 `null` 就回傳 `1` 表示 `e` > 此元素
 - 如果此元素比較的元素 `e` 和 `e.val` 非 `null`，但此元素的 `val` 為 `null` 則回傳 `1` 表示 `e` < 此元素
--
 
 上面這兩個邏輯處理了元素的 `val` 為 `null` 或者一起比較的元素 `e` 為 `null` 或 `e.val` 為 `null` 的狀況，從回傳值可以看出這個邏輯是想把 `null` 值往後排序。
 
