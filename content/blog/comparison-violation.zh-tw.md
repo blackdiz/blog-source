@@ -1,11 +1,11 @@
 ---
-title: "Java: Compartion Violation 問題小記"
+title: "Java: Comparison method violates its general contract!"
 date: 2021-07-11T23:58:09+08:00
 Tags: ["java"]
 Categories: ["note"]
 ---
 
-前陣子和朋友討論一個奇妙的錯誤訊息，說在執行 `Collections.sort(list)` 時會出現。第一眼看到這個錯誤訊息，腦中只冒出無限多個問號，心中只有 OS：「這些工程師什麼時候才能好好說句人話...」(~~話說你自己不也是工程師嘛~~)，沒辦法只好請出 Google 大神，誰叫我們都是 Google 工程師嘛。
+前陣子和朋友討論一個奇妙的錯誤訊息，說在執行 `Collections.sort(list)` 時會出現。第一眼看到這個錯誤訊息 `Comparison method violates its general contract!`，腦中只冒出無限多個問號，心中只有 OS：「這些工程師什麼時候才能好好說句人話...」(~~話說你自己不也是工程師嘛~~)，沒辦法只好請出 Google 大神，誰叫我們都是 Google 工程師嘛。
 
 原來在 JDK 1.7 後引入了 Tim Sort 這個排序法，Tim Sort 是 Merge Sort 的變型但更有效率，至於 Tim Sort 和 Merge Sort 具體的排序細節為何則不在本文範圍內(~~其實是我自己也還沒搞清楚 Tim Sort…~~)。
 雖然比較有效率，但對於排序時如何比較被排序元素大小的邏輯正確性就更要求，要能使用 `Collections.sort` 的元素必須實作 `Comparable` 的 `toCompare` method，根據 [API 說明](https://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html#compareTo(T))，實作 `compareTo` 時，比較元素大小的邏輯必須符合下列原則：
