@@ -17,3 +17,11 @@ code {
   font-size: 1.3em;
   line-height: 2;
 }
+.img-wrapper img {
+  margin: auto;
+  text-align: center;
+}
+.img-wrapper .cp {
+  font-size: 0.7em;
+  color: rgb(117, 117, 117);
+}
