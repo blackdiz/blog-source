@@ -18,6 +18,7 @@ Categories: ["note"]
 
 所以結論是 `command 2>&1 > /dev/null` 依然會輸出錯誤訊息到 terminal 上，而 `command > /dev/null 2>&1` 則不會輸出任何訊息。
 
+---
 參考資料：
 - [Bash One-Liners Explained, Part III: All about redirections](https://catonmat.net/bash-one-liners-explained-part-three)
 

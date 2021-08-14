@@ -63,6 +63,7 @@ configuration.setTemplateConfigurations(
 ```
 這樣輸出的最終結果 JSON 就不會 escape 特殊字元了。
 
+---
 參考資料：
 1. [Apache FreeMarker document: Output formats](https://freemarker.apache.org/docs/dgui_misc_autoescaping.html#dgui_misc_autoescaping_outputformat)
 2. [Apache FreeMarker document: Associating output formats with templates](https://freemarker.apache.org/docs/pgui_config_outputformatsautoesc.html)
