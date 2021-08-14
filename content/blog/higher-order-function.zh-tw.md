@@ -5,7 +5,7 @@ Tags: ["program", "function programming"]
 Categories: ["note"]
 ---
 
-在 **Functional Programming** (函式程式設計) 的世界中，function (函式) 本身可以接受另一個 function 的做為參數，或昔返回一個 function 做為回傳值，這就是所謂 **Higher Order Function**。
+在 **Functional Programming** (函式程式設計) 的世界中，function (函式) 本身可以接受另一個 function 的做為參數，或是返回一個 function 做為回傳值，這就是所謂 **Higher Order Function**。
 
 以 JavaScript 為例，比方我們想在每次執行 function 時附帶執行 1 個 function，我們可以把要附帶執行的 function 做為參數傳入：
 ```javascript
