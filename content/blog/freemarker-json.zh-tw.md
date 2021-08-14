@@ -4,7 +4,6 @@ date: 2021-07-06T01:28:39+08:00
 Tags: ["backend", "server side", "java"]
 Categories: ["note"]
 ---
-## Use FreeMarker Template to Output JSON
 
 首先我們先準備一個 FreeMarker 的 template: `test.fltj`, `fltj` 是我們自創給 JSON 格式 tempalte 的副檔名:
 ```

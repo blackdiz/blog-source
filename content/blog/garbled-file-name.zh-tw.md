@@ -5,7 +5,6 @@ Tags: ["backend", "server side", "java"]
 Categories: ["note"]
 DisableComments: false
 ---
-## 從 Server 端輸出下載的檔名含有中文會變成亂碼問題
 
 朋友遇到一個問題是如果檔名有中文，在瀏覽器下載時檔名會變成亂碼。
 
