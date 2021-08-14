@@ -1,17 +1,15 @@
 ---
 title: "Higher Order Function 小記"
-date: 2021-08-14T22:35:07+08:00
+date: 2021-08-14T22:33:38+08:00
 Tags: ["program", "function programming"]
 Categories: ["note"]
 ---
 
-# Higher Order Function 小記
-
-在 Functional Programming (FP 函數向導向) 的世界中，function (函數) 本身可以接受另一個 function 的做為參數並返回 function，這就是所謂 **Higher Order Function**。
+在 **Functional Programming** (函式程式設計) 的世界中，function (函式) 本身可以接受另一個 function 的做為參數，或昔返回一個 function 做為回傳值，這就是所謂 **Higher Order Function**。
 
 以 JavaScript 為例，比方我們想在每次執行 function 時附帶執行 1 個 function，我們可以把要附帶執行的 function 做為參數傳入：
 ```javascript
-let f = function c() {
+let f = function() {
     console.log("I'm callback");
 }
 
@@ -27,8 +25,8 @@ console.log(sum);
 ```
 會印出：
 ```
-7
 I'm callback
+7
 ```
 
 另一方面我們也可以回傳 function，這裡的 `addThree()` 回傳一個 function 是接受一個參數 `x` 回傳 `x + 3`，所以 `sum(4)`，會得到 `7`：
@@ -70,14 +68,14 @@ function print(x) {
 2
 3
 ```
-而通常我們可以傳入一個 anonymous function (匿名函數)，也就是不用先宣告好 function 直接傳入 function，所以我們可以把上面的程式改寫成：
+而通常我們可以傳入一個 anonymous function (匿名函式)，也就是不用先宣告好 function 直接傳入 function，所以我們可以把上面的程式改寫成：
 ```javascript
 // anonymous function 可以不用宣告名字
 [1, 2, 3].forEach(function(i) {
     console.log(i);
 });
 
-// 在 JavaScript 中可以用 arrow function (箭頭函數) 讓程式更簡潔
+// 在 JavaScript 中可以用 arrow function (箭頭函式) 讓程式更簡潔
 [1, 2, 3].forEach((i) => console.log(i));
 ```
 
@@ -259,6 +257,33 @@ let facebook = url("https", "www.facebook.com")
 console.log(facebook("posts")); // 印出 https://www.facebook.com/posts
 ```
 
+另一個可能的簡單應用是我們可以把讀取檔案的程式和處理檔案的程式分開：
+```javascript
+function readFile(callback) {
+    let data = read("{path}") // 假使 read 是讀取 path 路徑的檔案
+
+    return function(data) {
+        callback(data);
+    };
+}
+
+// 如此 printFile 會在讀取檔案後印出它的內容
+let printFile = readFile((data) => {
+    console.log(data);
+})
+```
+如此一來，我們就可以重復使用讀取檔案的程式，只需要傳入不同的處理邏輯就可以得到不同的處理檔案方式。
+
 ## 結語
 上述雖然是以 JavaScript 做為例子，但主要是描述 Higer Order Function 的概念，其他語言可能語法不同，但基本概念相同，在現在大多數語言都支援多範式下，通常也支援程度不一的 Functional Programming，比方 Java 雖然是 Object Oriented Programming (物件導向語言 OOP) 但在 Java 8 後也加入了 Functional Programming 的概念讓我們不必像從前一樣任何實作邏輯都必須先宣告成 `class` 而讓我們可以寫出更簡潔同時易讀性更高更專注在實作邏輯上的程式。此篇主要是記錄我自己對 Higher Order Function 的了解和比較常運作的部分，除了此篇提到的以外還有很多 Higher Order Function 的應用，比方可以拿來做 **Dependency Injection** (依賴注入)，或者是實現如 **Aspect Oriented Programming** (剖面導向 AOP) 的設計，有機會的話再來另外記錄。
 
+---
+參考資料
+- [Wiki - 高階函式](https://zh.wikipedia.org/wiki/%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0)
+- [MDN forEach](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+- [MDN map](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+- [MDN filter](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+- [MDN reduce](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+- [Curry and Function Composition](https://medium.com/javascript-scene/curry-and-function-composition-2c208d774983)
+
+如果有什麼想法或需要指正的地方，歡迎您留言或來信 😄
