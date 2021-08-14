@@ -275,7 +275,9 @@ let printFile = readFile((data) => {
 如此一來，我們就可以重復使用讀取檔案的程式，只需要傳入不同的處理邏輯就可以得到不同的處理檔案方式。
 
 ## 結語
-上述雖然是以 JavaScript 做為例子，但主要是描述 Higer Order Function 的概念，其他語言可能語法不同，但基本概念相同，在現在大多數語言都支援多範式下，通常也支援程度不一的 Functional Programming，比方 Java 雖然是 Object Oriented Programming (物件導向語言 OOP) 但在 Java 8 後也加入了 Functional Programming 的概念讓我們不必像從前一樣任何實作邏輯都必須先宣告成 `class` 而讓我們可以寫出更簡潔同時易讀性更高更專注在實作邏輯上的程式。此篇主要是記錄我自己對 Higher Order Function 的了解和比較常運作的部分，除了此篇提到的以外還有很多 Higher Order Function 的應用，比方可以拿來做 **Dependency Injection** (依賴注入)，或者是實現如 **Aspect Oriented Programming** (剖面導向 AOP) 的設計，有機會的話再來另外記錄。
+上述雖然是以 JavaScript 做為例子，但主要是描述 Higer Order Function 的概念，其他語言可能語法不同，但基本概念相同，在現在大多數語言都支援多範式下，通常也支援程度不一的 Functional Programming，比方 Java 雖然是 Object Oriented Programming (物件導向語言 OOP) 但在 Java 8 後也加入了 Functional Programming 的概念讓我們不必像從前一樣任何實作邏輯都必須先宣告成 `class` 而讓我們可以寫出更簡潔同時易讀性更高更專注在實作邏輯上的程式。
+
+此篇主要是記錄我自己對 Higher Order Function 的了解和比較常使用的部分，除了此篇提到的以外還有很多 Higher Order Function 的應用，比方可以拿來做 **Dependency Injection** (依賴注入)，或者是實現如 **Aspect Oriented Programming** (剖面導向 AOP) 的設計，有機會的話再來另外記錄。
 
 ---
 參考資料
