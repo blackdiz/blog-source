@@ -38,9 +38,12 @@ $(gcloud beta emulators pubsub env-init)
 
 這邊為了方便寫了簡單的 script 一次做完並將 PubSub 的 log 輸出到檔案中：
 ```bash
-#!/bin/sh
-gcloud beta emulators pubsub start --host-port=0.0.0.0:8085 --project=PUBSUB_PROJECT_ID 2&1> ~/pubsub.log
+#!/bin/bash
+# 將 log 輸出到 ~/pubsub.log，可以依需要自行修改路徑
+gcloud beta emulators pubsub start --host-port=0.0.0.0:8085 --project=PUBSUB_PROJECT_ID >> ~/pubsub.log 2>&1 &
+
 echo "Set PUBSUB_EMULATOR_HOST"
+
 # 這裡不確定原因但用 $(gcloud beta emulators pubsub env-init) 無法正常設置環境變數。因為我們已經指定了 listen port，所以直接用 export 指定即可
 export PUBSUB_EMULATOR_HOST=0.0.0.0:8085
 ```
