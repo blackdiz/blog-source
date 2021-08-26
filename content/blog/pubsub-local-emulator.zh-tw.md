@@ -38,10 +38,11 @@ gcloud components update
 ```
 
 ### 啟動 Pub/Sub emulator
-執行，`PUBSUB_PROJECT_ID` 可以自由命名，在後面連線到 Pub/Sub 時會用到。另外 Pub/Sub 每次啟動時的 listen port 是隨機的，為了方便起見，我們用 `--host-port=0.0.0.0:8085` 指定 listen port 為 8085：
+執行：
 ```bash
 gcloud beta emulators pubsub start --host-port=0.0.0.0:8085 --project=PUBSUB_PROJECT_ID
 ```
+`PUBSUB_PROJECT_ID` 可以自由命名，在後面連線到 Pub/Sub 時會用到。另外 Pub/Sub 每次啟動時的 listen port 是隨機的，為了方便起見，我們用 `--host-port=0.0.0.0:8085` 指定 listen port 為 8085
 
 接著設定環境變數 `PUBSUB_EMULATOR_HOST`，執行：
 ```bash
@@ -62,7 +63,7 @@ export PUBSUB_EMULATOR_HOST=0.0.0.0:8085
 ```
 
 ### 使用 Java 程式連線
-建立 `Topic` 和 `Subscription`
+建立 `Topic` 和 `Subscription`：
 ```java
  // 從環境變數 PUBSUB_EMULATOR_HOST 取得 Pub/Sub 的 listen port
 String hostport = System.getenv("PUBSUB_EMULATOR_HOST");
