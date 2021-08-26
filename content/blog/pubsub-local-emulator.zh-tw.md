@@ -30,24 +30,15 @@ Pub/Sub 的基本概念是我們在 Pub/Sub 上建立一個 `Topic`，`Topic` �
 ./google-cloud-sdk/install.sh && ./google-cloud-sdk/bin/gcloud init
 ```
 
-<<<<<<< HEAD
 ### 安裝 Pub/Sub emulator
-=======
-### 安裝 PubSub emulator
->>>>>>> 13e21a85afdd138e7909abc5101a7b3e5edf9bc7
 執行：
 ```bash
 gcloud components install pubsub-emulator
 gcloud components update
 ```
 
-<<<<<<< HEAD
 ### 啟動 Pub/Sub emulator
 執行，`PUBSUB_PROJECT_ID` 可以自由命名，在後面連線到 Pub/Sub 時會用到。另外 Pub/Sub 每次啟動時的 listen port 是隨機的，為了方便起見，我們用 `--host-port=0.0.0.0:8085` 指定 listen port 為 8085：
-=======
-### 啟動 PubSub emulator
-執行，`PUBSUB_PROJECT_ID` 可以自由命名，在後面連線到 PubSub 時會用到。另外 PubSub 每次啟動時的 listen port 是隨機的，為了方便起見，我們用 `--host-port=0.0.0.0:8085` 指定 listen port 為 8085：
->>>>>>> 13e21a85afdd138e7909abc5101a7b3e5edf9bc7
 ```bash
 gcloud beta emulators pubsub start --host-port=0.0.0.0:8085 --project=PUBSUB_PROJECT_ID
 ```
@@ -56,15 +47,9 @@ gcloud beta emulators pubsub start --host-port=0.0.0.0:8085 --project=PUBSUB_PRO
 ```bash
 $(gcloud beta emulators pubsub env-init)
 ```
-<<<<<<< HEAD
 會自動取得 Pub/Sub 啟動時的 listen port 設為環境變數。
 
 這邊為了方便寫了簡單的 script 一次做完並將 Pub/Sub 的 log 輸出到檔案中：
-=======
-會自動取得 PubSub 啟動時的 listen port 設為環境變數。
-
-這邊為了方便寫了簡單的 script 一次做完並將 PubSub 的 log 輸出到檔案中：
->>>>>>> 13e21a85afdd138e7909abc5101a7b3e5edf9bc7
 ```bash
 #!/bin/bash
 # 將 log 輸出到 ~/pubsub.log，可以依需要自行修改路徑
@@ -74,7 +59,6 @@ echo "Set PUBSUB_EMULATOR_HOST"
 
 # 這裡不確定原因但用 $(gcloud beta emulators pubsub env-init) 無法正常設置環境變數。因為我們已經指定了 listen port，所以直接用 export 指定即可
 export PUBSUB_EMULATOR_HOST=0.0.0.0:8085
-<<<<<<< HEAD
 ```
 
 ### 使用 Java 程式連線
@@ -169,6 +153,3 @@ try {
 - [Google Cloud Pub/Sub Local Emulator Doc](https://cloud.google.com/pubsub/docs/emulator)
 
 如果有什麼想法或需要指正的地方，歡迎您留言或來信 😄
-=======
-```
->>>>>>> 13e21a85afdd138e7909abc5101a7b3e5edf9bc7
